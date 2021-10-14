@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.background img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.layer1 img{
+    opacity: 70%;
+}
+
+h1, h3, p {
+    color: white;
+}
+
+h1 {
+    font-family:'Play', sans-serif;
+    font-size: 30px;
+}
+
+.jumbotron {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jumbotron-data-diri {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.jumbotron-data-diri img{
+    height: 250px;
+    width: auto;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 5px;
+    border-color: rgb(22, 35, 43);
+}
+
+.data {
+    background-color:rgb(22, 35, 43);
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 500px;
+    border-color: aquamarine;
+    border-radius: 5px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.indikator h3 {
+    color: #04c9c2;
+}
+
+.data h3, h1 {
+    margin-left: 10px;
+}
+
+.data h3 {
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: small;
+}
+
+.jumbotron-isi {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    height: 300px;
+    width: 800px;
+    background-color: rgb(22, 35, 43);
+    border-radius: 5px;
+}
+
+.jumbotron-isi p, h1 {
+    margin-left: 10px;
+}
+
+.jumbotron-isi p {
+    color: #04c9c2;
+    height: 100px;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: small;
+}
+
+.jumbotron-isi a {
+    text-decoration: none;
+    color: orange;
+}
+
+.jumbotron-kontak a {
+    font-family:'Play', sans-serif;
+    font-size: 20px;
+}
+
+a,a:active {
+    color: white;
+    text-decoration: none;
+}

@@ -5,6 +5,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 .background img{
@@ -15,7 +16,7 @@ body {
 }
 
 .layer1 img{
-    opacity: 70%;
+    opacity: 50%;
 }
 
 h1, h3, p {

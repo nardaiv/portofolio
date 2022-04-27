@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--title-->
     <title>Biodata diri</title>
+
+    <!--link css-->
     <link rel="stylesheet" href="styles/style.css">
+
     <!--Font family-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,47 +21,47 @@
 </head>
 
 <body>
-    <!--Background-->
-    <div class="background">
-       <div class="layer2"><img src="scr/background(2).jpg" alt=""></div>
-       <div class="layer1"><img src="scr/background.png" alt=""></div>
-    </div>
     <!--Jumbotron-->
-    <div class="jumbotron">
+    <main class="jumbotron">
         <!--Foto dan data diri-->
         <div class="jumbotron-data-diri">
+            
             <!--Foto Diri-->
             <div class="photo">
-                <img src="scr/Foto diri.jpeg" alt="">
+                <img src="scr/Foto diri.jpeg" alt="" class="container">
             </div>
+
             <!--Data Diri-->
-            <div class="data">
-                <h1>Biodata</h1>
+            <div class="data container">
+                <h1 class="fc-white fs-1">Biodata</h1>
                 <div class="detail">
                     <div class="indikator">
-                         <h3>Nama</h3>
-                         <h3>Kelas</h3>
-                         <h3>Tempat, tanggal lahir</h3>
-                         <h3>Cita-cita</h3>
-                     </div>
-                     <div class="deskripsi">
-                         <h3>: Narda Ikiru V.</h3>
-                         <h3>: X-E</h3>
-                         <h3>: Bandung, 1 Desember 2005</h3>
-                         <h3>: insinyur</h3>
-                     </div> 
-                 </div>
+                        <h3 class="fc-blue fs-3">Nama</h3>
+                        <h3 class="fc-blue fs-3">Kelas</h3>
+                        <h3 class="fc-blue fs-3" hidden>Tempat, tanggal lahir</h3>
+                        <h3 class="fc-blue fs-3">Cita-cita</h3>
+                    </div>
+                    <div class="deskripsi">
+                        <h3 class="fc-white fs-3">: Narda Ikiru V.</h3>
+                        <h3 class="fc-white fs-3">: X-E</h3>
+                        <h3 class="fc-white fs-3" hidden>: Bandung, 1 Desember 2005</h3>
+                        <h3 class="fc-white fs-3">: insinyur</h3>
+                    </div> 
+                    
+                </div>
             </div>
         </div>
+        <!--Perkenalan-->
+        <div class="jumbotron-isi container">
+            <h1 class="fc-white fs-1">Perkenalan Diri</h1>
+            <p class="fc-blue fs-3">hai, nama saya narda.(mencoba belajar <a href="https://id.wikipedia.org/wiki/HTML" class="fc-orange tooltip">html</a>)</p>
+        </div>
         <!--Kontak-->
-        <div class="jumbotron-isi">
-            <h1>Perkenalan Diri</h3>
-            <p>hai, nama saya narda.(mencoba belajar <a href="https://id.wikipedia.org/wiki/HTML">html</a>)</p>
-        </div>
         <div class="jumbotron-kontak">
-            <h3><a href="https://github.com">Kontak</a></h3>
+            <h3><a href="https://github.com" class="fc-white fs-2">Kontak</a></h3>
         </div>
-    </div>
+    </main>        
+
 </body>
 
 </html>

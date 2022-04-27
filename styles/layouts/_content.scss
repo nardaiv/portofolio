@@ -1,0 +1,144 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/variables' as *;
+@use 'sass:map';
+
+@mixin size($height,$width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin size-2 {
+    @include size(50vw,90%);
+    max-width: 350px;
+}
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin center($center) {
+    @if $center == 1 {
+        justify-content: center;
+    }@else if $center == 2{
+        align-items: center;
+    }@else if $center == 3{
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+body{
+    @include flex(row);
+    @include center(3);
+}
+
+main{
+    &.jumbotron{
+        @include flex(column);
+        @include size(100vh, 50vw);
+        @include center(2);
+        gap: 5vh;
+        max-width: 800px;
+    }
+    
+    .container{
+        background-color: $bg-color-2;
+        border-radius: 5px;  
+    }
+
+    .jumbotron-data-diri{
+        @include flex(row);
+        justify-content: space-between;
+        @include size(auto, 100%);
+        .photo{
+            @include size(100%, auto);
+            max-height: 250px;
+            img {
+                @include size(90%,auto);
+            }  
+        } 
+    }
+    .data{
+        @include flex(column);
+        @include size(auto, 50%);
+              
+    }
+    .detail{
+        @include flex(row);
+    }
+
+    .jumbotron-isi{
+        @include size( 20vw, 95%);
+        max-height: 200px;
+        min-height: 100px;
+        a:hover{
+            color: map.get($font-colors,"white");
+        }
+    }
+    .jumbotron-kontak a{
+        &:hover{
+            color:map.get($font-colors,"blue");
+        }
+    }
+}
+
+@include lg{
+    main .jumbotron-data-diri .photo{
+        @include size(20vw, auto);
+    }
+}
+
+@include md{
+    main.jumbotron{
+        @include size(100vh,80vw )
+    }
+    
+}
+
+@include sm{
+    main{
+        &.jumbotron{
+            @include size(auto, 80vw)
+        }
+        .jumbotron-data-diri{
+            
+            .photo{
+                display: flex;
+                position: absolute;
+                z-index: -1;
+                right: 10vw;
+            }
+            .data{
+                box-shadow: 5px -5px 10px 0 ;
+                @include size(30vw, 80%);
+                
+            }
+        }
+    }
+}
+
+@include xs{
+    main{
+        &.jumbotron{
+            @include size(auto,90vw );
+        }
+        .jumbotron-data-diri{
+            @include flex(column);
+            @include center(2);
+            gap: 5vh;
+            .photo{
+                @include size(60vw,auto);
+            }
+        }
+        
+        .data{
+            @include size-2;
+            display: flex;
+        }
+        .jumbotron-isi{
+            @include size-2;
+        }  
+    }
+   
+}

@@ -1,0 +1,31 @@
+@use 'sass:math';
+
+$screen-lg:992px;
+$screen-md:768px;
+$screen-sm:576px;
+
+
+@mixin lg {
+    @media only screen and (min-width:$screen-lg)  {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width:$screen-md) and (max-width:#{$screen-lg - 1px}){
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (min-width:$screen-sm) and (max-width:#{$screen-md - 1px}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width:$screen-sm) {
+        @content;
+    }
+}
+

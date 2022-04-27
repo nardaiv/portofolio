@@ -1,0 +1,57 @@
+@use '../abstracts/breakpoints' as *;
+
+
+@mixin mp ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+
+main{
+    
+    .jumbotron-data-diri{
+        @include mp(5vw 0 0 0, 0);
+        .photo{
+            img{
+                @include mp(0, 7.5%);
+            }
+        }
+    }
+    .data{
+        @include mp(0, 2.5%);
+
+    }
+
+    .jumbotron-isi{
+        @include mp(0,2.5% );
+    }
+    
+    .detail{
+        @include mp(10px 0 0 0,0);
+        
+    }
+    .jumbotron-kontak{
+        @include mp(0,10%);
+    }
+}
+
+@include sm{
+    main{
+        .jumbotron-data-diri{
+            .data{
+                @include mp(27.5vw 0 0 0,2.5% )
+            }
+        }
+    }
+}
+
+@include xs{
+    main{
+        .data{
+            @include mp(0,5%);
+        }
+        .jumbotron-isi{
+            @include mp(0,5%);
+        }
+    }
+}

@@ -1,121 +1,203 @@
-* {
+main .jumbotron-data-diri {
+  margin: 5vw 0 0 0;
+  padding: 0;
+}
+main .jumbotron-data-diri .photo img {
+  margin: 0;
+  padding: 7.5%;
+}
+main .data {
+  margin: 0;
+  padding: 2.5%;
+}
+main .jumbotron-isi {
+  margin: 0;
+  padding: 2.5%;
+}
+main .detail {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+main .jumbotron-kontak {
+  margin: 0;
+  padding: 10%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  main .jumbotron-data-diri .data {
+    margin: 27.5vw 0 0 0;
+    padding: 2.5%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .data {
     margin: 0;
+    padding: 5%;
+  }
+  main .jumbotron-isi {
+    margin: 0;
+    padding: 5%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    background-color: black;
+  background-color: black;
+  background-image: url("/scr/background.png");
+  background-size: cover;
 }
 
-.background img{
+a, a:active {
+  text-decoration: none;
+}
+
+h3, p {
+  font-family: "Noto Sans Mono", monospace;
+}
+
+h1, a {
+  font-family: "Play", sans-serif;
+}
+
+.fs-1 {
+  font-size: 30px;
+}
+
+.fs-2 {
+  font-size: 20px;
+}
+
+.fs-3 {
+  font-size: small;
+}
+
+.fc-blue {
+  color: #04c9c2;
+}
+
+.fc-white {
+  color: white;
+}
+
+.fc-orange {
+  color: orange;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+main.jumbotron {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+  align-items: center;
+  gap: 5vh;
+  max-width: 800px;
+}
+main .container {
+  background-color: #16232b;
+  border-radius: 5px;
+}
+main .jumbotron-data-diri {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+main .jumbotron-data-diri .photo {
+  height: 100%;
+  width: auto;
+  max-height: 250px;
+}
+main .jumbotron-data-diri .photo img {
+  height: 90%;
+  width: auto;
+}
+main .data {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+}
+main .detail {
+  display: flex;
+  flex-direction: row;
+}
+main .jumbotron-isi {
+  height: 20vw;
+  width: 95%;
+  max-height: 200px;
+  min-height: 100px;
+}
+main .jumbotron-isi a:hover {
+  color: white;
+}
+main .jumbotron-kontak a:hover {
+  color: #04c9c2;
+}
+
+@media only screen and (min-width: 992px) {
+  main .jumbotron-data-diri .photo {
+    height: 20vw;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main.jumbotron {
     height: 100vh;
-    width: 100%;
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  main.jumbotron {
+    height: auto;
+    width: 80vw;
+  }
+  main .jumbotron-data-diri .photo {
+    display: flex;
     position: absolute;
     z-index: -1;
+    right: 10vw;
+  }
+  main .jumbotron-data-diri .data {
+    box-shadow: 5px -5px 10px 0;
+    height: 30vw;
+    width: 80%;
+  }
 }
-
-.layer1 img{
-    opacity: 50%;
-}
-
-h1, h3, p {
-    color: white;
-}
-
-h1 {
-    font-family:'Play', sans-serif;
-    font-size: 30px;
-}
-
-.jumbotron {
+@media only screen and (max-width: 576px) {
+  main.jumbotron {
+    height: auto;
+    width: 90vw;
+  }
+  main .jumbotron-data-diri {
     display: flex;
-    height: 300px;
-    width: 100%;
     flex-direction: column;
     align-items: center;
-}
-
-.jumbotron-data-diri {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.jumbotron-data-diri img{
-    height: 250px;
+    gap: 5vh;
+  }
+  main .jumbotron-data-diri .photo {
+    height: 60vw;
     width: auto;
-    border-style: solid;
-    border-width: 4px;
-    border-radius: 5px;
-    border-color: rgb(22, 35, 43);
-}
-
-.data {
-    background-color:rgb(22, 35, 43);
-    margin-left: 100px;
+  }
+  main .data {
+    height: 50vw;
+    width: 90%;
+    max-width: 350px;
     display: flex;
-    flex-direction: column;
-    height: 250px;
-    width: 500px;
-    border-color: aquamarine;
-    border-radius: 5px;
-}
-
-.detail {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-}
-
-.indikator h3 {
-    color: #04c9c2;
-}
-
-.data h3, h1 {
-    margin-left: 10px;
-}
-
-.data h3 {
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: small;
-}
-
-.jumbotron-isi {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    height: 300px;
-    width: 800px;
-    background-color: rgb(22, 35, 43);
-    border-radius: 5px;
-}
-
-.jumbotron-isi p, h1 {
-    margin-left: 10px;
-}
-
-.jumbotron-isi p {
-    color: #04c9c2;
-    height: 100px;
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: small;
-}
-
-.jumbotron-isi a {
-    text-decoration: none;
-    color: orange;
-}
-
-.jumbotron-kontak a {
-    font-family:'Play', sans-serif;
-    font-size: 20px;
-}
-
-a,a:active {
-    color: white;
-    text-decoration: none;
-}
+  }
+  main .jumbotron-isi {
+    height: 50vw;
+    width: 90%;
+    max-width: 350px;
+  }
+}/*# sourceMappingURL=style.css.map */

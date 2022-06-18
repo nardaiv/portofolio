@@ -8,7 +8,7 @@
 }
 
 @mixin size-2 {
-    @include size(50vw,90%);
+    @include size(auto,90%);
     max-width: 350px;
 }
 
@@ -54,9 +54,16 @@ main{
         .photo{
             @include size(100%, auto);
             max-height: 250px;
+
             img {
-                @include size(90%,auto);
-            }  
+                @include size(100%,auto);
+                box-sizing: border-box;
+                border: solid;
+                border-width: 10px;
+                border-color: $bg-color-2;
+            }
+            
+            box-sizing: border-box;
         } 
     }
     .data{
@@ -69,19 +76,74 @@ main{
     }
 
     .jumbotron-isi{
-        @include size( 20vw, 95%);
-        max-height: 200px;
-        min-height: 100px;
+        @include size( fit-content, 95%);
+        //max-height: 200px;
+        //min-height: 100px;
         a:hover{
             color: map.get($font-colors,"white");
         }
     }
-    .jumbotron-kontak a{
+    .jumbotron-kontak a, .jumbotron-isi a{
         &:hover{
             color:map.get($font-colors,"blue");
+            transition: 1s;
+        }
+    }
+    .jumbotron-isi a{
+        &:hover{
+            text-decoration: underline;
+            transition: 1s;
         }
     }
 }
+
+.slider{
+    //@include size(400px,400px );
+    img{
+        @include size(auto,290px);
+        border-radius: 5px;
+    }
+    p{
+        text-align: center;
+    }
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color:  map.get($font-colors,"white");
+    padding: 10px;
+    &:hover{
+        //transform: scale(1.0000005);
+        transition: 0.5s;
+        border-color:  map.get($font-colors,"blue");
+        border-width: 2px;
+        box-sizing: border-box;
+    }
+}
+
+.wrapper{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    button{
+        font-size: 30px;
+        //height: 50px;
+        //width: 50px;
+        border-radius: 10px;
+        border-color: map.get($font-colors,"white");
+        border-width: 4px;
+        background-color: $bg-color-2;
+        color: map.get($font-colors,"white");
+        &:hover{
+            color: map.get($font-colors,"blue");
+            border-color: map.get($font-colors,"blue");
+            transition: 500ms;
+        }
+    }
+    
+}
+
+
 
 @include lg{
     main .jumbotron-data-diri .photo{
@@ -92,6 +154,12 @@ main{
 @include md{
     main.jumbotron{
         @include size(100vh,80vw )
+    }
+    .wrapper{
+        button{
+            font-size: 25px;
+            border-width: 2px;
+        }
     }
     
 }
@@ -116,6 +184,12 @@ main{
             }
         }
     }
+    .wrapper{
+        button{
+            font-size: 25px;
+            border-width: 3px;
+        }
+    }
 }
 
 @include xs{
@@ -137,8 +211,24 @@ main{
             display: flex;
         }
         .jumbotron-isi{
+            
             @include size-2;
-        }  
+
+        }
+        .slider{
+            img{
+                @include size(auto,50vw);
+            }
+        }
+       
+    }
+
+    .wrapper{
+        gap: 2vw;
+        button{
+            font-size: 30px;
+            border-width: 2px;
+        }
     }
    
 }

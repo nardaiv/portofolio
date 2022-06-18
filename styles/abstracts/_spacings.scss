@@ -11,11 +11,6 @@ main{
     
     .jumbotron-data-diri{
         @include mp(5vw 0 0 0, 0);
-        .photo{
-            img{
-                @include mp(0, 7.5%);
-            }
-        }
     }
     .data{
         @include mp(0, 2.5%);
@@ -24,14 +19,23 @@ main{
 
     .jumbotron-isi{
         @include mp(0,2.5% );
+        .text-box{
+            @include mp(0,10px 0 50px 0)
+        }
     }
     
     .detail{
-        @include mp(10px 0 0 0,0);
+        @include mp(10px 0 50px 0,0);
         
     }
     .jumbotron-kontak{
         @include mp(0,10%);
+    }
+    .wrapper{
+        @include mp(50px 0, 0);
+        @include xs{
+            @include mp(10px,0)
+        }
     }
 }
 
@@ -54,4 +58,5 @@ main{
             @include mp(0,5%);
         }
     }
+
 }

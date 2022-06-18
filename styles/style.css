@@ -2,10 +2,6 @@ main .jumbotron-data-diri {
   margin: 5vw 0 0 0;
   padding: 0;
 }
-main .jumbotron-data-diri .photo img {
-  margin: 0;
-  padding: 7.5%;
-}
 main .data {
   margin: 0;
   padding: 2.5%;
@@ -14,13 +10,27 @@ main .jumbotron-isi {
   margin: 0;
   padding: 2.5%;
 }
+main .jumbotron-isi .text-box {
+  margin: 0;
+  padding: 10px 0 50px 0;
+}
 main .detail {
-  margin: 10px 0 0 0;
+  margin: 10px 0 50px 0;
   padding: 0;
 }
 main .jumbotron-kontak {
   margin: 0;
   padding: 10%;
+}
+main .wrapper {
+  margin: 50px 0;
+  padding: 0;
+}
+@media only screen and (max-width: 575px) {
+  main .wrapper {
+    margin: 10px;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -46,7 +56,7 @@ main .jumbotron-kontak {
 
 body {
   background-color: black;
-  background-image: url("/src/background.jpg");
+  background-image: url("https://raw.githubusercontent.com/nardaiv/portofolio/main/src/background.jpg");
   background-size: cover;
 }
 
@@ -117,10 +127,15 @@ main .jumbotron-data-diri .photo {
   height: 100%;
   width: auto;
   max-height: 250px;
+  box-sizing: border-box;
 }
 main .jumbotron-data-diri .photo img {
-  height: 90%;
+  height: 100%;
   width: auto;
+  box-sizing: border-box;
+  border: solid;
+  border-width: 10px;
+  border-color: #16232b;
 }
 main .data {
   display: flex;
@@ -133,16 +148,63 @@ main .detail {
   flex-direction: row;
 }
 main .jumbotron-isi {
-  height: 20vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 95%;
-  max-height: 200px;
-  min-height: 100px;
 }
 main .jumbotron-isi a:hover {
   color: white;
 }
-main .jumbotron-kontak a:hover {
+main .jumbotron-kontak a:hover, main .jumbotron-isi a:hover {
   color: #04c9c2;
+  transition: 1s;
+}
+main .jumbotron-isi a:hover {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.slider {
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px;
+}
+.slider img {
+  height: auto;
+  width: 290px;
+  border-radius: 5px;
+}
+.slider p {
+  text-align: center;
+}
+.slider:hover {
+  transition: 0.5s;
+  border-color: #04c9c2;
+  border-width: 2px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper button {
+  font-size: 30px;
+  border-radius: 10px;
+  border-color: white;
+  border-width: 4px;
+  background-color: #16232b;
+  color: white;
+}
+.wrapper button:hover {
+  color: #04c9c2;
+  border-color: #04c9c2;
+  transition: 500ms;
 }
 
 @media only screen and (min-width: 992px) {
@@ -155,6 +217,11 @@ main .jumbotron-kontak a:hover {
   main.jumbotron {
     height: 100vh;
     width: 80vw;
+  }
+
+  .wrapper button {
+    font-size: 25px;
+    border-width: 2px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -173,6 +240,11 @@ main .jumbotron-kontak a:hover {
     height: 30vw;
     width: 80%;
   }
+
+  .wrapper button {
+    font-size: 25px;
+    border-width: 3px;
+  }
 }
 @media only screen and (max-width: 575px) {
   main.jumbotron {
@@ -190,14 +262,26 @@ main .jumbotron-kontak a:hover {
     width: auto;
   }
   main .data {
-    height: 50vw;
+    height: auto;
     width: 90%;
     max-width: 350px;
     display: flex;
   }
   main .jumbotron-isi {
-    height: 50vw;
+    height: auto;
     width: 90%;
     max-width: 350px;
+  }
+  main .slider img {
+    height: auto;
+    width: 50vw;
+  }
+
+  .wrapper {
+    gap: 2vw;
+  }
+  .wrapper button {
+    font-size: 30px;
+    border-width: 2px;
   }
 }/*# sourceMappingURL=style.css.map */

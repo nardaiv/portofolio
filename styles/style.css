@@ -171,6 +171,11 @@ main .jumbotron-isi a:hover {
   border-radius: 5px;
   border-color: white;
   padding: 10px;
+  box-sizing: border-box;
+}
+.slider:hover {
+  transition: 0.5s;
+  border-color: #04c9c2;
 }
 .slider img {
   height: auto;
@@ -179,12 +184,6 @@ main .jumbotron-isi a:hover {
 }
 .slider p {
   text-align: center;
-}
-.slider:hover {
-  transition: 0.5s;
-  border-color: #04c9c2;
-  border-width: 2px;
-  box-sizing: border-box;
 }
 
 .wrapper {
@@ -281,7 +280,7 @@ main .jumbotron-isi a:hover {
     gap: 2vw;
   }
   .wrapper button {
-    font-size: 30px;
+    font-size: 25px;
     border-width: 2px;
   }
 }/*# sourceMappingURL=style.css.map */

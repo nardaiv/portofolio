@@ -1,4 +1,5 @@
 let i = Math.floor(Math.random()*3);
+i= i==3? 0 : i;
 
 //hide slide
 document.getElementsByClassName('slider')[0].style.display="none";

@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--title-->
-    <title>Biodata diri</title>
+    <title>Portofolio</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="og:name" property="Website Portofolio">
+    <meta name="og:decription" property="Website Portofolio berisikan sedikit informasi">
+    <meta name="og:image" property="https://raw.githubusercontent.com/nardaiv/portofolio/main/src/portofolio.png">
 
     <!--link css-->
     <link rel="stylesheet" href="styles/style.css">
+
+    <!--Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <!--Font family-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,17 +59,48 @@
                 </div>
             </div>
         </div>
+
         <!--Perkenalan-->
         <div class="jumbotron-isi container">
             <h1 class="fc-white fs-1">Perkenalan Diri</h1>
-            <p class="fc-blue fs-3">hai, nama saya narda.(mencoba belajar <a href="https://id.wikipedia.org/wiki/HTML" class="fc-orange tooltip">html</a>)</p>
+            <p class="fc-blue fs-3 text-box">Hai, nama saya narda. Saya tinggal di Kota Bandung. Saya masih bersekolah di jenjang SMA.</p>
         </div>
+
+        <!--Image slider-->
+        <div class="jumbotron-isi container">
+            <h1 class="fc-white fs-1">Website</h1>
+
+            <div class="detail wrapper" >
+                <button id="back" onclick="slider(this.id)"><i class="bi bi-chevron-left"></i></button>
+
+                <!--isi image slider-->
+                <div class="slider" id="0">
+                    <a href="https://nardaiv.github.io/todolist/" target="_blank"><img src="./src/todo.png" alt="" id="img-0"></a>
+                    <p><a href="https://nardaiv.github.io/todolist/" class="fc-white fs-2" target="_blank">To-do List</a></p>
+                </div>
+                
+                <div class="slider" id="1">
+                    <a href="https://nardaiv.github.io/stopwatch/" target="_blank"><img src="./src/stopwatch.png" alt="" id="img-1"></a>
+                    <p><a href="https://nardaiv.github.io/stopwatch/" class="fc-white fs-2" target="_blank">Stopwatch</a></p>
+                </div>
+
+                <div class="slider" id="2">
+                    <a href="https://fivecybercommunity.github.io/kelompok-1/" target="_blank"><img src="./src/Tugas Kelompok.png" alt="" id="img-2"></a>
+                    <p><a href="https://fivecybercommunity.github.io/kelompok-1/" class="fc-white fs-2" target="_blank">Tugas Kelompok</a></p>
+                </div>
+                <!---->
+
+                <button id="next" onclick="slider(this.id)"><i class="bi bi-chevron-right"></i></button>
+            </div>    
+        </div>
+
         <!--Kontak-->
         <div class="jumbotron-kontak">
-            <h3><a href="https://github.com" class="fc-white fs-2">Kontak</a></h3>
+            <h3><a href="https://github.com/nardaiv" class="fc-white fs-2" target="_blank"><i class="bi bi-github"></i> github</a></h3>
         </div>
     </main>        
 
+    <script src="./main.js"></script>
 </body>
 
 </html>

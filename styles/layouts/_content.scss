@@ -195,7 +195,8 @@ main{
             @include center(2);
             gap: 5vh;
             .photo{
-                @include size(60vw,auto);
+                @include size(70vw,auto);
+                max-height: 300px;
             }
         }
         

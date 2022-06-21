@@ -257,8 +257,9 @@ main .jumbotron-isi a:hover {
     gap: 5vh;
   }
   main .jumbotron-data-diri .photo {
-    height: 60vw;
+    height: 70vw;
     width: auto;
+    max-height: 300px;
   }
   main .data {
     height: auto;
